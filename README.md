@@ -12,7 +12,7 @@ Para a versão desktop, a página deverá se aproximar ao máximo do protótip
 
 Público-alvo do curso: professores de Ensino Fundamental e Médio.
 
-**TEMPO PARA DESENVOLVIMENTO:** 72 horas
+**PRAZO PARA DESENVOLVIMENTO:** Sexta-feira, 1 de julho - 12:00:00
 
 **PREMISSAS TÉCNICAS**
 
