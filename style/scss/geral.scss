@@ -1,0 +1,33 @@
+@import 'base.scss';
+
+.title-container {
+  margin-top: 4rem;
+}
+.title-content {
+  max-width: 500px;
+  h1 {
+    color: $--text-color;
+    font-size: 5rem;
+    line-height: 5rem;
+    margin-bottom: 2rem;
+  }
+}
+.title-image {
+  @include flex();
+}
+.teoria-container {
+  max-width: 800px;
+}
+.teoria-title {
+  margin-bottom: 2rem;
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+.teoria-content {
+  h6 {
+    font-size: 1.5rem;
+    color: $--text-color;
+  }
+}

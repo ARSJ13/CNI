@@ -1,0 +1,44 @@
+$--primary-color: #E39DC4;
+$--text-color: #9E0059;
+$--text-white: #fff;
+$--button-green: #09814A;
+$--button-blue: #004E89;
+$--button-red: #9E0059;
+$--button-grey: #D7DFE0;
+
+@mixin flex() {
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Catamaran', sans-serif;
+}
+p, span, button {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+p {
+  font-size: 16px
+}
+body {
+  main {
+    @include flex();
+    width: 100vw;
+    height: 100%;
+    background: url('/assets/BG1.png');
+    background-size: 110%;
+    background-position: 80% -100px ;
+    background-repeat: no-repeat;
+    section.one {
+      max-width: 1000px;
+      .title-container {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
