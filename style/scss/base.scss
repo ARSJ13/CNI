@@ -1,4 +1,6 @@
 $--primary-color: #E39DC4;
+$--color-pink: #E8C0D7;
+$--color-darkpink: #9E0059;
 $--text-color: #9E0059;
 $--text-white: #fff;
 $--button-green: #09814A;
@@ -6,9 +8,23 @@ $--button-blue: #004E89;
 $--button-red: #9E0059;
 $--button-grey: #D7DFE0;
 
+$--base: 900px;
+
 @mixin flex() {
   display: flex;
   justify-content: center;
+}
+@mixin subtitle() {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+[pink] {
+  background: $--color-pink;
+}
+
+[darkpink] {
+  background: $--color-darkpink;
 }
 
 * {
@@ -18,26 +34,65 @@ $--button-grey: #D7DFE0;
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Catamaran', sans-serif;
 }
-p, span, button {
+p, div, span, button {
   font-family: 'Source Sans Pro', sans-serif;
 }
 p {
-  font-size: 16px
+  font-size: 18px
 }
 body {
   main {
-    @include flex();
-    width: 100vw;
+    width: 100%;
     height: 100%;
-    background: url('/assets/BG1.png');
-    background-size: 110%;
-    background-position: 80% -100px ;
-    background-repeat: no-repeat;
-    section.one {
-      max-width: 1000px;
-      .title-container {
+
+    .one-container {
+      @include flex();
+      background: url('/assets/BG1.png');
+      background-size: cover;
+      background-position: 80% -100px ;
+      background-repeat: no-repeat;
+      padding-bottom: 15rem;
+      .one-content {
+        max-width: $--base;
+        .title-container {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    
+    .two-container {
+      min-height: 15rem;
+      @include flex();
+      flex-direction: column;
+      align-items: center;
+      .two-content {
+        max-width: $--base;
+        width: 100%;
+      }
+      .info-content {
         display: flex;
         align-items: center;
+        max-width: $--base;
+        width: 100%;
+        padding: 10rem 6rem;
+        margin: 2rem 0;
+        background: url('/assets/Box.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+    
+    .three-container {
+      @include flex();
+      flex-direction: column;
+      align-items: center;
+      background: url('/assets/BG2.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      .three-content {
+        max-width: $--base;
+        width: 100%;
       }
     }
   }
