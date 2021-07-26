@@ -18,7 +18,7 @@
   }
 }
 .title-image {
-  @include flex();
+  @include flex(center);
 }
 .teoria-container {
   max-width: 800px;
@@ -63,13 +63,14 @@
     max-width: 550px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 150px;
-    row-gap: 150px;
+    column-gap: 8rem;
+    row-gap: 7rem;
+    padding: 1rem;
     div {
-      width: 10rem;
-      height: 10rem;
+      width: 7rem;
+      height: 7rem;
       padding: 1rem;
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-weight: bold;
       text-transform: uppercase;
       text-align: center;
@@ -112,6 +113,69 @@
             font-weight: 300;
           }
         }
+      }
+    }
+  }
+}
+
+.card-content {
+  @include flex(flex-start);
+  flex-direction: column;
+  row-gap: 4rem;
+  .card-content-scroll {
+    display: flex;
+    max-height: 400px;
+    padding: 1rem;
+    &:first-child {
+      margin-top: 4rem;
+    }
+    .three-content-title {
+      margin-right: 2rem;
+      h2 {
+        color: $--text-color;
+        font-weight: bold;
+      }
+    }
+    .card-image {
+      img {
+        max-width: 416px;
+        height: 400px;
+      }
+    }
+  }
+}
+
+.card-scroll {
+  max-height: 400px;
+  overflow-y: scroll;
+  padding: 1rem;
+  .card-row {
+    display: flex;
+    margin-bottom: 3rem;
+    .three-content-title {
+      margin-right: 2rem;
+      h2 {
+        color: $--text-color;
+        font-weight: bold;
+      }
+    }
+    .card-image {
+      img {
+        max-width: 416px;
+        height: 400px;
+      }
+    }
+    &:nth-child(2) {
+      flex-direction: column;
+      img {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 1rem;
+      }
+    }
+    &:nth-child(3) {
+      .three-content-title {
+        margin: 0px 0px 0px 2rem;
       }
     }
   }

@@ -10,9 +10,9 @@ $--button-grey: #D7DFE0;
 
 $--base: 900px;
 
-@mixin flex() {
+@mixin flex($direction) {
   display: flex;
-  justify-content: center;
+  justify-content: $direction;
 }
 @mixin subtitle() {
   font-size: 2rem;
@@ -46,7 +46,7 @@ body {
     height: 100%;
 
     .one-container {
-      @include flex();
+      @include flex(center);
       background: url('/assets/BG1.png');
       background-size: cover;
       background-position: 80% -100px ;
@@ -63,34 +63,35 @@ body {
     
     .two-container {
       min-height: 15rem;
-      @include flex();
+      @include flex(center);
       flex-direction: column;
       align-items: center;
       .two-content {
         max-width: $--base;
         width: 100%;
       }
-      .info-content {
-        display: flex;
-        align-items: center;
-        max-width: $--base;
-        width: 100%;
-        padding: 10rem 6rem;
-        margin: 2rem 0;
-        background: url('/assets/Box.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
+    }
+    .info-content {
+      display: flex;
+      align-items: center;
+      max-width: $--base;
+      width: 100%;
+      padding: 10rem 6rem;
+      margin: 2rem 0;
+      background: url('/assets/Box.png');
+      background-size: cover;
+      background-repeat: no-repeat;
     }
     
     .three-container {
-      @include flex();
+      @include flex(center);
       flex-direction: column;
       align-items: center;
       background: url('/assets/BG2.png');
-      background-size: cover;
+      background-size: 100%;
+      background-position: 0 200px;
       background-repeat: no-repeat;
-      .three-content {
+      .three-content, .card-content {
         max-width: $--base;
         width: 100%;
       }

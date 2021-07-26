@@ -5,5 +5,5 @@ function active() {
 const img = document.querySelectorAll('img')
 
 img.addEventListener('click', () => {
-  active()
+  
 })
