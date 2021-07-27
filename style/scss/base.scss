@@ -40,8 +40,14 @@ p, div, span, button {
 p {
   font-size: 18px
 }
+
+@keyframes down {
+  from {transform: translateY(-50px);}
+  to {transform: translateY(0px);}
+}
 .active {
   display: inline;
+  animation: down 300ms 1;
 }
 .off {
   display: none;

@@ -23,8 +23,17 @@ p {
   font-size: 18px;
 }
 
+@keyframes down {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
 .active {
   display: inline;
+  animation: down 300ms 1;
 }
 
 .off {
@@ -137,6 +146,10 @@ body main .three-container .three-content, body main .three-container .card-cont
   font-weight: bold;
 }
 
+.teoria-content {
+  display: flex;
+  gap: 2rem;
+}
 .teoria-content h6 {
   font-size: 1.5rem;
   color: #9E0059;

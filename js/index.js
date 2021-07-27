@@ -1,18 +1,12 @@
-function active(event) {
-  if (event?.path) {
-    const {path} = event
-    console.log(path)
-    
-    path[1].classList.add('bgVetor');
-    path[3].children[1].classList.add('active')
-    path[3].children[1].classList.remove('off')
-  }
+const items = document.querySelectorAll('.teoria-item');
 
-  //const card = document.querySelectorAll('.off');
-  // card.forEach (element => {
-  //   element.classList.add('active');
-  //   element.classList.remove('off');
-  //   console.log(element)
-  // })
+function active(event) {
+  console.log(event)  
+  let key = event.target
+  key.classList.add('bgVetor')
+  let card = event.path[3].children[1]
+  card.classList.remove('off')
+  card.classList.add('active')
+  console.log(key)  
 }
-document.addEventListener('click', active)
+window.addEventListener('click', active)
