@@ -121,14 +121,11 @@
 .card-content {
   @include flex(flex-start);
   flex-direction: column;
-  row-gap: 4rem;
+  row-gap: 6rem;
   .card-content-scroll {
     display: flex;
     max-height: 400px;
     padding: 1rem;
-    &:first-child {
-      margin-top: 4rem;
-    }
     .three-content-title {
       margin-right: 2rem;
       h2 {
@@ -141,6 +138,12 @@
         max-width: 416px;
         height: 400px;
       }
+    }
+    &:first-child {
+      margin-top: 6rem;
+    }
+    &:nth-child(4) {
+      margin-bottom: 6rem;
     }
   }
 }

@@ -23,6 +23,20 @@ p {
   font-size: 18px;
 }
 
+.active {
+  display: inline;
+}
+
+.off {
+  display: none;
+}
+
+.bgVetor {
+  background-image: url("/assets/Elipse.png");
+  background-repeat: no-repeat;
+  background-size: 15rem;
+}
+
 body main {
   width: 100%;
   height: 100%;
@@ -59,10 +73,10 @@ body main .info-content {
   align-items: center;
   max-width: 900px;
   width: 100%;
-  padding: 10rem 6rem;
+  padding: 8rem 11rem 10rem 6rem;
   margin: 2rem 0;
   background: url("/assets/Box.png");
-  background-size: cover;
+  background-size: 90%;
   background-repeat: no-repeat;
 }
 body main .three-container {
@@ -71,9 +85,12 @@ body main .three-container {
   flex-direction: column;
   align-items: center;
   background: url("/assets/BG2.png");
-  background-size: 100%;
+  background-size: 100% 90%;
   background-position: 0 200px;
   background-repeat: no-repeat;
+}
+body main .three-container .three-content {
+  margin-top: 6rem;
 }
 body main .three-container .three-content, body main .three-container .card-content {
   max-width: 900px;
@@ -86,12 +103,14 @@ nav {
   column-gap: 1rem;
 }
 nav button {
-  width: 7rem;
+  width: 10rem;
   padding: 1rem 2rem;
   border: none;
   border-radius: 0 0 10px 10px;
   color: #fff;
   font-weight: bold;
+  transform: translateY(-2rem);
+  transition: all 200ms linear;
 }
 nav button:nth-child(1n) {
   background-color: #09814A;
@@ -105,6 +124,10 @@ nav button:nth-child(3n) {
 nav button:nth-child(4n) {
   background-color: #D7DFE0;
 }
+nav button:hover {
+  cursor: pointer;
+  transform: translateY(0rem);
+}
 
 .teoria-content {
   display: flex;
@@ -115,6 +138,7 @@ nav button:nth-child(4n) {
   width: 15rem;
   background-color: #E39DC4;
   border: none;
+  outline: none;
 }
 .teoria-content button img {
   cursor: pointer;
@@ -134,11 +158,11 @@ nav button:nth-child(4n) {
   background: #9E0059;
   color: #fff;
   cursor: pointer;
+  transition: all 300ms linear;
 }
 .button-footer button:hover {
   background: #E39DC4;
   color: #9E0059;
-  transition: all 300ms ease-in-out;
 }
 
 /*# sourceMappingURL=button.css.map */

@@ -40,6 +40,18 @@ p, div, span, button {
 p {
   font-size: 18px
 }
+.active {
+  display: inline;
+}
+.off {
+  display: none;
+}
+.bgVetor {
+  background-image: url('/assets/Elipse.png');
+  background-repeat: no-repeat;
+  background-size: 15rem;
+}
+
 body {
   main {
     width: 100%;
@@ -76,10 +88,10 @@ body {
       align-items: center;
       max-width: $--base;
       width: 100%;
-      padding: 10rem 6rem;
+      padding: 8rem 11rem 10rem 6rem;
       margin: 2rem 0;
       background: url('/assets/Box.png');
-      background-size: cover;
+      background-size: 90%;
       background-repeat: no-repeat;
     }
     
@@ -88,9 +100,12 @@ body {
       flex-direction: column;
       align-items: center;
       background: url('/assets/BG2.png');
-      background-size: 100%;
+      background-size: 100% 90%;
       background-position: 0 200px;
       background-repeat: no-repeat;
+      .three-content {
+        margin-top: 6rem;
+      }
       .three-content, .card-content {
         max-width: $--base;
         width: 100%;
