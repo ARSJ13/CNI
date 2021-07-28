@@ -76,6 +76,8 @@ body main .two-container {
 body main .two-container .two-content {
   max-width: 900px;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 body main .info-content {
   display: flex;
