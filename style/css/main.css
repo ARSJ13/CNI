@@ -529,6 +529,7 @@ nav {
   column-gap: 1rem;
 }
 nav button {
+  outline: none;
   max-width: 10rem;
   width: 100%;
   padding: 1rem 2rem;
@@ -569,6 +570,7 @@ nav button:hover {
   outline: none;
 }
 .teoria-content button img {
+  outline: none;
   cursor: pointer;
   width: 10rem;
 }
@@ -579,6 +581,7 @@ nav button:hover {
   justify-content: center;
 }
 .button-footer button {
+  outline: none;
   border: none;
   border-radius: 30px;
   padding: 1rem 3rem;
@@ -777,6 +780,7 @@ body main .three-container .three-content, body main .three-container .card-cont
 
 .seta-content {
   margin-top: 2rem;
+  outline: none;
 }
 .seta-content img {
   cursor: pointer;

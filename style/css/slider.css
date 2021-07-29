@@ -182,6 +182,7 @@ body main .three-container .three-content, body main .three-container .card-cont
 
 .seta-content {
   margin-top: 2rem;
+  outline: none;
 }
 .seta-content img {
   cursor: pointer;

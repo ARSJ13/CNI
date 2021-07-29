@@ -1,3 +1,5 @@
+@import 'base.scss';
+
 @mixin flexColumn {
   flex-direction: column;
   align-items: center;
@@ -94,15 +96,38 @@
   .card-content {
     .card-content-scroll {
       padding: 2rem;
-      .card-title {
-        margin-right: 0;
+      .three-content-title {
+        margin: 0px;
+        p {
+          text-align: justify;
+        }
       }
     }
     .card-scroll {
+      background: $--color-pink;
+      box-shadow: 3px 3px 4px 8px rgba(0, 0, 0, 0.015);
       padding: 2rem;
       .card-row {
+        row-gap: 1rem;
         .three-content-title {
           margin: 0px;
+          p {
+            text-align: justify;
+          }
+        }
+        .card-image {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  #slider {
+    .slider-content {
+      .card-img-container {
+        .card-img-content {
+          min-height: 400px;
         }
       }
     }
