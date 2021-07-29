@@ -21,15 +21,15 @@ function active(event) {
   }
   if (count === 4 ) {
     setas[1].innerHTML = 
-    '<img src="/assets/Seta direita inativa.png" alt="seta para direita">'
+    '<img src="./assets/Seta direita inativa.png" alt="seta para direita">'
   }
   if (count === 0){
     setas[0].innerHTML = 
-    '<img src="/assets/Seta esquerda inativa.png" alt="seta para esquerda">'
+    '<img src="./assets/Seta esquerda inativa.png" alt="seta para esquerda">'
   }
   if (count > 0 && count < 4) {
-    setas[0].innerHTML = '<img src="/assets/Seta esquerda.png" alt="seta para esquerda">'
-    setas[1].innerHTML = '<img src="/assets/Seta direita.png" alt="seta para direita">'
+    setas[0].innerHTML = '<img src="./assets/Seta esquerda.png" alt="seta para esquerda">'
+    setas[1].innerHTML = '<img src="./assets/Seta direita.png" alt="seta para direita">'
   }
 }
 window.addEventListener('click', active)
