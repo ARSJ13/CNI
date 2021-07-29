@@ -19,8 +19,16 @@ Faça um clone desse repositório e acesse o diretório.
 $ git clone git@github.com:ARSJ13/cni.git cni && cd cni
 ```
 
-## 💻 Acesse a Demo
+## 💻 Hard Skills
+
+**JavaScript(vanilla)**
+
+**SASS**
+
+**HTML**
+
+**CSS**
+
+## ✌️ Acesse a Demo
 
 [>>Link<<](https://arsj13.github.io/CNI/)
-```
-
