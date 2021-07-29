@@ -110,6 +110,12 @@
 }
 
 @media screen and (max-width: 677px) {
+  body {
+    main {
+      width: 100vw;
+      overflow-x: hidden;
+    }
+  }
   .info-container {
     opacity: 0;
   }
