@@ -71,11 +71,7 @@
   div {
     width: 20px;
     height: 20px;
-    background-image: url('../../assets/Carrossel inativo.png');
     background-size: 20px;
     background-repeat: no-repeat;
-    &:first-child {
-      background-image: url('../../assets/Carrossel ativo.png');
-    }
   }
 }

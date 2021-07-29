@@ -43,7 +43,7 @@ p {
 .bgVetor {
   background-image: url("/assets/Elipse.png");
   background-repeat: no-repeat;
-  background-size: 15rem;
+  background-size: 10rem;
 }
 
 body main {
@@ -79,16 +79,19 @@ body main .two-container .two-content {
   display: flex;
   justify-content: center;
 }
-body main .info-content {
-  display: flex;
-  align-items: center;
+body main .info-container {
   max-width: 900px;
-  width: 100%;
-  padding: 8rem 11rem 10rem 6rem;
+  padding: 8rem 11rem 10rem 8rem;
   margin: 2rem 0;
   background: url("/assets/Box.png");
-  background-size: 90%;
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
+}
+body main .info-container .info-content {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
 }
 body main .three-container {
   display: flex;
@@ -96,8 +99,8 @@ body main .three-container {
   flex-direction: column;
   align-items: center;
   background: url("/assets/BG2.png");
-  background-size: 100% 90%;
-  background-position: 0 200px;
+  background-size: cover;
+  background-position: 50% 0px;
   background-repeat: no-repeat;
 }
 body main .three-container .three-content {
@@ -123,8 +126,8 @@ body main .three-container .three-content, body main .three-container .card-cont
 }
 .title-content h1 {
   color: #9E0059;
-  font-size: 5rem;
-  line-height: 5rem;
+  font-size: 4rem;
+  line-height: 3.5rem;
   margin-bottom: 2rem;
 }
 

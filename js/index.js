@@ -1,3 +1,4 @@
+//global
 const items = document.querySelectorAll('.teoria-item');
 const cards = document.querySelectorAll('.card-img-content'),
 setas = document.querySelectorAll('.seta-content'),
@@ -5,7 +6,10 @@ image = document.querySelectorAll('.img-icon');
 let count = 0;
 
 const marcadores = document.querySelectorAll('.carrosel>div');
-  
+
+let validation = true;
+
+//Functions animated
 function active(event) {
   let key = event.target.id
   if (key === '1' || key === '2' || key === '3' || key === '4' || key === '5') {  
@@ -31,39 +35,64 @@ function active(event) {
 window.addEventListener('click', active)
 
 //Sliders
-
 function nextCard(){
   if (count < cards.length - 1) {  
     cards[count].classList.remove('selected');
-    image[count].classList.remove('firstCount');
-    marcadores[count].classList.remove('inativo');
-    count++;
+    image[count+1].classList.remove('firstCount');
+    marcadores[count+1].classList.remove('inativo');
+    ++count;
     cards[count].classList.add('selected');
     image[count].classList.add('nextCount');
     marcadores[count].classList.add('ativo');
-    console.log(cards[count])
+    count === 4 ? validation = false : validation = true;
+    console.log(count)
+    console.log(validation)
   }
 }
 
 function firstCard() {
   if (count > 0) {
     cards[count].classList.remove('selected');
-    image[count].classList.remove('nextCount');
+    image[count-1].classList.remove('nextCount');
     marcadores[count].classList.remove('ativo');
-    count--;
+    --count;
     cards[count].classList.add('selected');
     image[count].classList.add('firstCount');
-    marcadores[count].classList.add('inativo');
-    console.log(cards[count]) 
+    marcadores[count+1].classList.add('inativo');
+    count === 4 ? validation = false : validation = true;
+    console.log(count)
+    console.log(validation)
   }
 }
 
 setas[0].addEventListener('click', firstCard)
 setas[1].addEventListener('click', nextCard)
 
+// blocked scroll
+function captureScroll() {
+  let base = document.querySelector('.info-container')
+  let scrollTop = window.pageYOffset;
+  if (validation) {
+    scrollTop > base.offsetTop - 500 ? window.scrollTo(0,base.offsetTop -500) : ''
+  }
+  console.log(base.offsetTop)
+  console.log(scrollTop)
+}
+window.addEventListener('scroll', captureScroll);
 
-//Marcador
-console.log(marcadores)
-
+//scroll animation
+const targetItems = document.querySelectorAll('[data-anime]');
+function animeScroll() {
+  const windowTop = window.pageYOffset + ((window.innerHeight*3)/4);
+  targetItems.forEach(item => {
+    if (windowTop > item.offsetTop) {
+      item.classList.add('animate-scroll');
+    } else {
+      item.classList.remove('animate-scroll');
+    }
+  })
+}
+animeScroll();
+window.addEventListener('scroll', animeScroll);
 
 
