@@ -41,7 +41,7 @@ p {
 }
 
 .bgVetor {
-  background-image: url("../../assets/Elipse.png");
+  background-image: url("../../../assets/Elipse.png");
   background-repeat: no-repeat;
   background-size: 10rem;
 }
@@ -53,7 +53,7 @@ body main {
 body main .one-container {
   display: flex;
   justify-content: center;
-  background: url("../../assets/BG1.png");
+  background: url("../../../assets/BG1.png");
   background-size: cover;
   background-position: 80% -100px;
   background-repeat: no-repeat;
@@ -83,7 +83,7 @@ body main .info-container {
   max-width: 900px;
   padding: 8rem 11rem 10rem 8rem;
   margin: 2rem 0;
-  background: url("../../assets/Box.png");
+  background: url("../../../assets/Box.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -98,7 +98,7 @@ body main .three-container {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: url("../../assets/BG2.png");
+  background: url("../../../assets/BG2.png");
   background-size: cover;
   background-position: 50% 0px;
   background-repeat: no-repeat;
