@@ -266,6 +266,7 @@ body main .three-container .three-content, body main .three-container .card-cont
 }
 
 .card-scroll {
+  background: #E8C0D7;
   max-height: 400px;
   overflow-y: scroll;
   padding: 1rem;
